@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea Segnalazione | ITT G. Dorso</title>
+    
+    <link rel="stylesheet" href="csss/stile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="fileJS/theme.js"></script>
+    <script src="fileJS/testStorage.js" defer></script> 
+    <script src="fileJS/immaginiHeader.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-main">
+            <a href="https://www.itisguidodorso.edu.it">
+                <img src="immagini/logo.png" alt="Logo ITT" class="logo-img">
+            </a>
+            <h1>NUOVA SEGNALAZIONE</h1>
+            <a href="account.html">
+                <img id="header-profile-img" src="immagini/account.png" alt="Profilo" class="account-img">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="selezioneSegn.html">SEGNALAZIONI</a></li>
+                <li><a href="contatti.html">CONTATTI</a></li>
+            </ul>
+        </nav>
+      
+    </header>
+
+    <main>
+        <div class="form-container">
+            <header class="form-header" style="text-align: center; margin-bottom: 40px;">
+                <h2>Invia Segnalazione</h2>
+                <p>Il tuo contributo aiuta a migliorare la scuola.</p>
+            </header>
+
+            <form onsubmit="sendForm(); return false;">
+                
+                <div class="form-group">
+                    <label for="Title">Cosa è successo?</label>
+                    <input type="text" id="Title" name="Title" list="suggerimenti" placeholder="Inserisci un titolo breve..." required>
+                     <datalist id="suggerimenti">
+                        <option value="Lim non funzionante.">
+                        <option value="Pc rotto o mancante">
+                        <option value="Connessione assente.">
+                        <option value="Cavo HDMI/VGA rotto o mancante.">
+                        <option value="Tende rotte o mancanti.">
+                        <option value="Sedia rotta o mancante.">
+                        <option value="Banco rotto o mancante.">
+                        <option value="Finestra rotta o difettosa.">
+                        <option value="Luci non funzionanti.">
+                        <option value="Termosifone non funzionante.">
+                        <option value="Perdita d'acqua.">
+                        <option value="Mancanza di carta igienica.">
+                        <option value="Sapone mancante.">
+                        <option value="Mouse rotto o mancante.">
+                        <option value="Tastiera rotto o mancante.">
+                        <option value="PC non funzionante">
+                        <option value="Mancanza gessetti/cancino">
+                        <option value="Problema rete Wi-Fi">
+                        <option value="Riscaldamento spento">
+                        <option value="Altro"></option>
+                    </datalist>
+                    
+                </div>
+                <label for="Desc">Dettaglio problema</label>
+                <textarea id="Desc" name="Desc" placeholder=" descrivi..." rows="5" cols="10" required></textarea>
+             
+                
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="Luogo">Dove?</label>
+                        <select name="Luogo" id="Luogo" required>
+                        <option  value="-- Seleziona un luogo --"placeholder>-- Seleziona un luogo --</option>
+                        <optgroup label="Piano Terra">
+                            <optgroup label="Classi">
+                            <option value="T06-2Am">T06-2Am</option>
+                            <option value="T4-3Am">T4-3Am</option>
+                            <option value="t07-4Bm">t07-4Bm</option>
+                            <option value="T3-3Bm">T3 -3Bm</option>
+                            <option value="T4-3Am">T4-3Am</option>
+                            <option value="T08-5Bm">t08-5Bm</option>
+                            <option value="T45-2Bm">T45-2Bm</option>
+                            <option value="T44-1Ail">T44-1Ail</option>
+                            <option value="T43-1Am/5am">t43-1Am/5am</option>
+                            <option value="T32-2Al (cad)">t32-2Al(cad)</option>
+                            <option value="T44-1Ail">T44-1Ail</option>
+                            <option value="T42-2Al/4Al">T42-2Al</option>
+                            <option value="T41-1Bm/3Am">T41-1Bm/3Am</option>
+                            <option value="T40-1Bi/4Al">T40-1Bi/4Al</option>
+                            <option value="T38-1Aee/3Al">T38-1Aee/3Al</option>
+                            <option value="T39-2Bi/5Al">t39-2Bi/5Al</option>
+                            <option value="T56-1Bee">t56-1Bee</option>
+                            <option value="T59-5Cm">t59 -5Cm</option>
+                            <option value="T67-4Al">t67-4Al</option>
+                            <option value="T66-4Am">t66-4Am</option>
+                            </optgroup>
+                            <optgroup label="Bagni">
+                            <option value="T10-WC Donne">T10-Wc donne</option>
+                            <option value="T12-Wc donne (docenti)">T12-Wc donne (docenti)</option>
+                            <option value="T11-Wc uomini (docenti)">T11-Wc uomini (docenti)</option>
+                            <option value="t13-Wc uomini">T13-Wc uomini</option>
+                            <option value="T30-Wc uomo">T30-Wc uomo</option>
+                            <option value="t31-Wc donna">T31-Wc donna</option>
+                            <option value="Wc -1">Wc - 1</option>
+                            </optgroup>
+                                <optgroup label="Laboratori e altro">
+                                    <option value="13-Bis(Laboratorio logistica)">13-Bis(Laboratorio logistica)</option>
+                                    <option value="T05-Laboratorio meccanico sistemi">T05-Laboratorio meccanico sistemi</option>
+                                    <option value="T2-Laboratorio m.m">T2-Laboratorio m.m</option>
+                                    <option value="T46-Laboratorio di chimica">T46-Laboratorio di chimica</option>
+                                    <option value="Laboratorio biotecnologie">Laboratorio biotecnologie</option>
+                                    <option value="T21-Bar">T21-Bar</option>
+                                    <option value="T18-Deposito materiale">T18-Deposito materiale</option>
+                                    <option value="T46-Laboratorio di chimica">T46-Laboratorio di chimica</option>
+                                    <option value="T17-Interuttore elettrico generale">T17-Interuttore elettrico generale </option>
+                                    <option value="T23-Magazzino pulizie">T23-Magazzino pulizie</option>
+                                    <option value="T00-Ascensori">T00-Ascensore</option>
+                                    <option value="T25-Deposito">T25-Deposito</option>
+                                    <option value="T28-Deposito">T28-Deposito</option>
+                                    <option value="T29-Deposito">T29-Deposito</option>
+                                    <option value="T71-Deposito">T71-Deposito</option>
+                                    <option value="T37-Ee2">T37-Ee2</option>
+                                </optgroup>
+                        </optgroup>
+                        <optgroup label="Primo piano">
+                            <optgroup label="Classi">
+                                <option value="1.02-4Bl">1.02-4Bl</option>
+                                <option value="1.03-2Bl">1.03-2Bl</option>
+                                <option value="1.08-1Ab">1.08-1Ab</option>
+                                <option value="1.09-3Ab">1.09-3Ab</option>
+                                <option value="1.10-4Ab">1.10-4Ab</option>
+                                <option value="1.12-5Bb">1.12-5Bb</option>
+                                <option value="1.13-5Al">1.13-5Al</option>
+                                <option value="1.02-4Bl">1.02-4Bl</option>   
+                                <option value="1.02-4Bl">1.02-4Bl</option>
+                                <option value="1.08-1Ab">1.08-1Ab</option>
+                            </optgroup>
+                                <optgroup label="Segreteria e uffici">
+                                    <option value="1.24/1.25-Vice-presidenza">1.24/25 -Vice-presidenza</option>
+                                    <option value="1.15-Direttore amministrativo">1.15-Direttore amministrativo</option>
+                                    <option value="1.23-Wc segretaria">1.23-Wc segretaria</option>
+                                    <option value="1.16-Ufficio amministrativo ">1.16-Ufficio amministrativo</option>
+                                    <option value="1.21-Sportello d'ascolto">1.21-Sportello d'ascolto</option>
+                                    <option value="1.20-Segretaria">1.20-Segretaria</option>
+                                    <option value="1.19-Ufficio tecnico">1.19-Ufficio tecnico</option>
+                                    <option value="1.17-Ufficio didattico">1.17-Ufficio didattico</option>
+                                    <option value="1.05- Wc uomini(docenti)">1.05 -Wc uomini(docenti)</option>
+                                    <option value="1.06-Wc uomini">1.06-Wc uomini </option>
+                                    <option value="1.35-Wc donne (docenti)">1.35-Wc donne (docenti)</option>
+                                    <option value="1.30-Wc donne">1.30 Wc donne</option>
+                                    <option value="1.31-Aula docenti">1.31-Aula-Docenti</option>
+                                    <option value="1.34-Ascensore">1.34-Ascensore</option>
+                                    <option value="1.26-Presidenza">1.26-Presidenza</option>
+                                </optgroup>
+                                <optgroup label="Bagno">
+                                    <option value="1.27-Wc donne">1.27-Wc donne</option>
+                                    <option value="bagno_02">02-bagno</option>
+                                    <option value="bagno_03">03-bagno</option>
+                                    <option value="bagno_1.8">1.8-bagno</option>
+                                </optgroup>
+                        </optgroup>
+                        <optgroup label="Secondo piano">
+                            <optgroup label="Classi">
+                                <option value="2.17-4Ai">2.17-4Ai</option>
+                                <option value="2.17 bis-5Aen">2.17 bis-5Aen</option>
+                                <option value="2.39-3Ai">2.39-3Ai</option>
+                                <option value="2.38-5Bi">2.38-5Bi</option>
+                                <option value="2.33-3Bi">2.33-3Bi</option>
+                                <option value="2.22bis-3Aen">2.22 bis-3Aen</option>
+                                <option value="2.33-3Bi">2.33 - Bi</option>
+                                <option value="2.18-1Ci">2.18-1Ci</option>
+                                <option value="2.20-2Ai">2.20-2Ai</option>
+                                <option value="2.19-1Ai">2.19-1Ai</option>
+                                <option value="2.21-4Bi">2.21-4Bi</option>
+                                <option value="2.22-4Aet">2.22 -4Aet</option>
+                                <option value="2.22 B1-3Aen">2.22 B1-3Aen</option>
+                                <option value="2.11-4Aen">2.11-4Aen</option>
+                                <option value="2.12 - 4ci">2.12-4Ci</option>
+                                <option value="2.13-3Ci">2.13-3Ci</option>
+                                <option value="2.14-3Di">2.14-3Di</option>
+                                <option value="2.15-2Ci">2.15-2Ci</option>
+                                <option value="2.16-2Di">2.16-2Di</option>
+                                <option value="2.04-5Ci">2.04-5Ci</option>
+                                <option value="2.03-5Ai">2.03-5Ai</option>
+                                <option value="2.02-3Aet">2.02 -3Aet</option>
+                                <option value="2.01-2Ail">2.01-2Ail</option>
+                            </optgroup>
+                            <optgroup label="laboratori">
+                                <option value="2.22 bis-Laboratorio Green">2.22 bis-Laboratorio Green</option>
+                                <option value="2.28-Sala multimediale">2.28-Sala multimediale</option>
+                                <option value="2.24-Elettronica 3">2.24-Elettronica 3</option>
+                                <option value="2.29-IT1">2.29-IT1</option>
+                                <option value="2.30-IT2">2.30 - IT2</option>
+                                <option value="2.23-IT3">2.23-IT3</option>
+                                <option value="2.31-Ee1">2.31-Ee1</option>
+                                <option value="2.32-Laboratorio Fisica">2.32-Laboratorio Fisica</option>
+
+                            </optgroup>
+                            <optgroup label="Bagno">
+                                <option value="2.37-Wc docenti">2.37-Wc docenti</option>
+                                <option value="2.36-Wc uomini">2.36-Wc uomini</option>
+                                <option value="2.35-Wc donne">2.35-Wc donne</option>
+                                <option value="2.34-Wc disabili">2.34-Wc disabili</option>
+                                <option value="2.08-Wc uomini">2.08 Wc uomini</option>
+                                <option value="2.06-Wc donne">2.06 - Wc donne</option>
+                                <option value="2.07-Wc uomini (docenti)">Wc uomini (docenti)</option>
+                            </optgroup>
+                        </optgroup>
+                            <optgroup label="Altro">
+                            <option value="Auditoriam">Auditorium</option>
+                            <option value="Palestra">Palestra</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data">Quando?</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Livello di urgenza</label>
+                    <div class="gravity-selector">
+                        <input type="radio" id="bassa" name="Gravita" value="Bassa" checked>
+                        <label for="bassa" class="label-bassa">BASSA</label>
+
+                        <input type="radio" id="media" name="Gravita" value="Media">
+                        <label for="media" class="label-media">MEDIA</label>
+
+                        <input type="radio" id="alta" name="Gravita" value="Alta">
+                        <label for="alta" class="label-alta">ALTA</label>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="Ruolo">Chi sei?</label>
+                        <select id="Ruolo" name="Ruolo" required>
+                            <option value="STUDENTE">Studente</option>
+                            <option value="DOCENTE">Docente</option>
+                            <option value="COLLABORATORE">Collaboratore / ATA</option>
+                            <option value="Segreteria">Segreteria</option>
+                            <option value="Dirigente">Dirigente</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Type">Categoria</label>
+                        <select id="Type" name="Type" required>
+                            <option value="Guasto">Guasto Tecnico</option>
+                            <option value="Mancanza">Mancanza Materiale</option>
+                            <option value="Problema">Problema Generale</option>
+                            <option value="Richiesta">Richiesta di miglioramento</option>
+                            <option value="Sicurezza">Sicurezza</option>
+                            <option value="ScarsaManutenzione">Scarsa manutenzione</option>
+                            <option value="Altro">Altro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 10px;">
+                    <button type="submit" class="submit-btn" style="flex: 2;">INVIA ORA</button>
+                    <button type="reset" class="submit-btn" style="flex: 1; background: #eee; color: #333;">RESET</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - ITT G. Dorso - Avellino</p>
+        <p>3Ci - Sistema Segnalazioni Interno</p>
+            <div class="theme-switch">
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle" class="switch">
+            <span class="icon sun">☀️</span>
+            <span class="icon moon">🌙</span>
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+    </footer>
+
+</body>
+</html>

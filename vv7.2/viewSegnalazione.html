@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizza Segnalazioni | ITT Guido Dorso</title>
+    
+    <link rel="stylesheet" href="csss/stile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <script src="fileJS/theme.js"></script>
+    <script src="fileJS/view.js" defer></script>
+    <script src="fileJS/immaginiHeader.js" defer></script>
+</head>
+<body>
+
+    
+
+    <header role="banner">
+        <div class="header-main">
+            <a href="https://www.itisguidodorso.edu.it" aria-label="Torna al sito ufficiale dell'Istituto">
+                <img src="immagini/logo.png" alt="Logo ITT Guido Dorso" class="logo-img">
+            </a>
+            <h1>SEGNALAZIONI</h1>
+            <a href="account.html" aria-label="Vai al tuo profilo">
+                <img id="header-profile-img" src="immagini/account.png" alt="" role="presentation" class="account-img">
+            </a>
+        </div>
+        <nav aria-label="Menu di navigazione principale">
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="selezioneSegn.html">SEGNALAZIONI</a></li>
+                <li><a href="contatti.html">CONTATTI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="view-container" aria-labelledby="view-title">
+            <header class="form-header">
+                <h2 id="view-title">Stato Segnalazioni</h2>
+                <p>Qui puoi visualizzare lo storico delle tue richieste e il loro avanzamento.</p>
+            </header>
+
+            <div id="data-container" role="region" aria-live="polite" aria-busy="true">
+                <form id="form" class="data-view-form">
+                    <p id="loading-msg" style="text-align: center; color: #999;">
+                        <span class="spinner" aria-hidden="true"></span> 
+                        Caricamento dei dati in corso...
+                    </p>
+                </form>
+            </div>
+
+            <nav class="button-group center-buttons" aria-label="Azioni rapide">
+                <a href="selezioneSegn.html" class="btn-secondary">Torna alla selezione</a>
+                <a href="segnalazioni.html" class="btn-primary">Nuova Segnalazione</a>
+            </nav>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 - ITT G. Dorso - Avellino</p>
+            <div class="theme-switch">
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle" class="switch">
+            <span class="icon sun">☀️</span>
+            <span class="icon moon">🌙</span>
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+    </footer>
+
+</body>
+</html>

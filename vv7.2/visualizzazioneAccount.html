@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Il tuo Account | ITT Guido Dorso</title>
+    
+    <link rel="stylesheet" href="csss/stile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <script src="fileJS/theme.js"></script>
+    <script src="fileJS/gestioneAcc.js" defer></script>
+    <script src="fileJS/immaginiHeader.js" defer></script>
+</head>
+<body>
+
+
+    <header role="banner">
+        <div class="header-main">
+            <a href="https://www.itisguidodorso.edu.it" aria-label="Torna al sito ufficiale dell'Istituto">
+                <img src="immagini/logo.png" alt="Logo ITT Guido Dorso" class="logo-img">
+            </a>
+            <h1>GESTIONE PROFILO</h1>
+            <a href="account.html" aria-current="page" aria-label="Sei già nella pagina del tuo profilo">
+                <img id="header-profile-img" src="immagini/account.png" alt="" role="presentation" class="account-img">
+            </a>
+        </div>
+
+        <nav aria-label="Menu di navigazione principale">
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="selezioneSegn.html">SEGNALAZIONI</a></li>
+                <li><a href="contatti.html">CONTATTI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <div class="profile-container">
+            <section class="profile-header" aria-labelledby="profile-title">
+                <h2 id="profile-title">I tuoi dati personali</h2>
+                
+                <img id="profile-img" class="profile-img" src="immagini/account.png" alt="Foto profilo utente">
+
+                <section class="profile-upload" aria-labelledby="upload-title">
+                    <h3 id="upload-title" class="sr-only">Carica nuova foto</h3>
+                    <label for="profile-image-input">Modifica immagine profilo:</label>
+                    <input type="file" id="profile-image-input" accept="image/*" aria-describedby="upload-hint">
+                    <p id="upload-hint" class="sr-only">Seleziona un'immagine dal tuo computer per aggiornare il profilo.</p>
+                    <button class="submit-btn" onclick="caricaImmagine()" aria-label="Salva la nuova immagine profilo">Salva immagine</button>
+                </section>
+            </section>
+
+            <article class="profile-info" aria-labelledby="info-title">
+                <h3 id="info-title">Riepilogo Account</h3>
+                <dl class="data-list">
+                    <div>
+                        <dt>Nome:</dt>
+                        <dd id="profile-name">Caricamento...</dd>
+                    </div>
+                    <div>
+                        <dt>Cognome:</dt>
+                        <dd id="profile-surname">Caricamento...</dd>
+                    </div>
+                    <div>
+                        <dt>Email:</dt>
+                        <dd id="profile-email">Caricamento...</dd>
+                    </div>
+                    <div>
+                        <dt>Codice Fiscale:</dt>
+                        <dd id="profile-codF">Caricamento...</dd>
+                    </div>
+                    <div>
+                        <dt>Ruolo:</dt>
+                        <dd id="profile-ruolo">Caricamento...</dd>
+                    </div>
+                </dl>
+            </article>
+            
+            <div class="profile-actions">
+                <button class="submit-btn btn-danger" type="button" id="logout-btn" onclick="logout()" aria-label="Esci dal sistema">
+                    Disconnetti (Logout)
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 - 3Ci - ITT Guido Dorso - Avellino</p>
+            <div class="theme-switch">
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle" class="switch">
+            <span class="icon sun">☀️</span>
+            <span class="icon moon">🌙</span>
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+    </footer>
+
+</body>
+</html>

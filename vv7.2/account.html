@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione | ITT Guido Dorso</title>
+    
+    <link rel="stylesheet" href="csss/stile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="fileJS/theme.js"></script>
+    <script src="fileJS/registra.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="intestazione-principale">
+            <a href="https://www.itisguidodorso.edu.it">
+                <img src="immagini/logo.png" alt="Logo ITT" class="logo-img">
+            </a>
+            <h1>REGISTRAZIONE</h1>
+            <a href="account.html">
+                <img id="header-profile-img" src="immagini/account.png" alt="Profilo" class="account-img">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="selezioneSegn.html">SEGNALAZIONI</a></li>
+                <li><a href="contatti.html">CONTATTI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    <section class="register-container">
+        <div class="form-header">
+            <h2>Crea il tuo Account</h2>
+            <p>Inserisci i tuoi dati per accedere al portale.</p>
+            <p class="register-link">Hai già un account? <a href="accesso.html" style="color: var(--accent); font-weight: 600;">Accedi qui</a></p>
+        </div>
+
+        <form id="registrationForm" onsubmit="registrati(); return false;"  style="padding: 20px;">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Es. Mario">
+                </div>
+                <div class="form-group">
+                    <label for="cognome">Cognome</label>
+                    <input type="text" id="cognome" name="cognome" required placeholder="Es. Rossi">
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="email">Email Istituzionale</label>
+                    <input type="email" id="email" name="email" required placeholder="nome.cognome@scuola.it">
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="codice_fiscale">Codice Fiscale</label>
+                    <input type="text" id="codice_fiscale" name="codice_fiscale" required placeholder="16 caratteri alfanumerici" maxlength="16"  pattern="^[a-zA-Z]{6}[0-9LMNPQRSTUV]{2}[a-zA-Z]{1}[0-9LMNPQRSTUV]{2}[a-zA-Z]{1}[0-9LMNPQRSTUV]{3}[a-zA-Z]{1}" style="text-transform: uppercase;">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Min. 8 caratteri">
+                </div>
+                <div class="form-group">
+                    <label for="confPassword">Conferma Password</label>
+                    <input type="password" id="confPassword" name="confPassword" required placeholder="Ripeti password">
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="ruolo">Ruolo Account</label>
+                    <select name="ruolo" id="ruolo" required>
+                        <option value="" disabled selected>-- Seleziona il tuo ruolo --</option>
+                        <option value="user">Studente / Personale (User)</option>
+                        <option value="admin">Amministratore (Admin)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="Errore" class="error-message"></div>
+
+            <div class="button-group">
+                <button type="submit" class="submit-btn">Registrati</button>
+                <button type="reset" class="reset-btn">Annulla</button>
+            </div>
+        </form>
+    </section>
+</main>
+    <footer>
+        <p>&copy; 2026 - ITT G. Dorso - Avellino</p>
+         <p>I dati forniti verranno utilizzati esclusivamente per contattarti in risposta alla tua richiesta.</p>
+            <div class="theme-switch">
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle" class="switch">
+            <span class="icon sun">☀️</span>
+            <span class="icon moon">🌙</span>
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+    </footer>
+
+</body>
+</html>

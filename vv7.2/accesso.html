@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accedi | ITT Guido Dorso</title>
+    
+    <link rel="stylesheet" href="csss/stile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="fileJS/theme.js"></script>
+    <script src="fileJS/accedi.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <section class="header-main">
+            <a href="https://www.itisguidodorso.edu.it">
+                <img src="immagini/logo.png" alt="Torna alla Home ITT Guido Dorso" class="logo-img">
+            </a>
+            <h1>ACCESSO</h1>
+            <a href="account.html">
+                <img id="header-profile-img" src="immagini/account.png" alt="Gestisci Account" class="account-img">
+            </a>
+        </section>
+        <nav aria-label="Navigazione principale">
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="selezioneSegn.html">SEGNALAZIONI</a></li>
+                <li><a href="contatti.html">CONTATTI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    <section class="login-container">
+        <header class="form-header">
+            <h2>Benvenuto</h2>
+            <p>Non hai un account? <a href="account.html" style="color: var(--accent); font-weight: 600;">Registrati qui</a></p>
+        </header>
+
+        <form id="loginForm" onsubmit="Accedi(); return false;" style="padding: 40px;">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required placeholder="Inserisci la tua email" autocomplete="email">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required placeholder="Inserisci la tua password" autocomplete="current-password">
+            </div>
+
+            <div class="form-group">
+                <label for="ruolo">Ruolo</label>
+                <select name="ruolo" id="ruolo" required>
+                    <option value="" disabled selected>-- Seleziona ruolo --</option>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+
+            <div id="Errore" class="error-message"></div>
+
+            <div class="button-group">
+                <button type="submit" class="submit-btn">Accedi</button>
+            </div>
+        </form>
+    </section>
+</main>
+
+    <footer>
+        <p>&copy; 2026 - ITT G. Dorso - Avellino</p>
+            <div class="theme-switch">
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle" class="switch">
+            <span class="icon sun">☀️</span>
+            <span class="icon moon">🌙</span>
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+    </footer>
+
+</body>
+</html>

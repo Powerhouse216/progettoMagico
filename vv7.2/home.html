@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Segnalazioni Online | ITT Guido Dorso</title>
+    
+    <link rel="stylesheet" href="csss/stile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="fileJS/theme.js"></script>
+    <script src="fileJS/testStorage.js" defer></script> 
+    <script src="fileJS/immaginiHeader.js" defer></script>   
+</head>
+<body>
+
+    
+
+    <header role="banner">
+        <div class="header-main">
+            <a href="https://www.itisguidodorso.edu.it" aria-label="Torna al sito ufficiale dell'Istituto">
+                <img src="immagini/logo.png" alt="Logo ITT Guido Dorso" class="logo-img">
+            </a>
+
+            <h1>HOME</h1>
+
+            <a href="account.html" aria-label="Accedi al tuo profilo personale">
+                <img id="header-profile-img" src="immagini/account.png" alt="" role="presentation" class="account-img">
+            </a>
+        </div>
+
+        <nav aria-label="Navigazione principale">
+            <ul>
+                <li><a href="home.html" aria-current="page">HOME</a></li>
+                <li><a href="selezioneSegn.html">SEGNALAZIONI</a></li>
+                <li><a href="contatti.html">CONTATTI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <article class="description-section">
+            <section aria-labelledby="progetto-titolo">
+                <h2 id="progetto-titolo">Descrizione Progetto</h2>
+                <p>
+                    Questo sito è nato da un’idea della classe <strong>3Ci</strong> per dare a tutti la possibilità di segnalare problemi della scuola in modo semplice e sicuro.
+                    È uno spazio aperto a <strong>studenti, professori e personale ATA</strong>, dove condividere difficoltà, disagi o suggerimenti per migliorare la vita scolastica.
+                </p>
+                <p>
+                    L’obiettivo è favorire il confronto e contribuire a rendere la scuola un posto migliore per tutti, promuovendo un clima di partecipazione attiva, responsabilità e rispetto.
+                </p>
+            </section>
+
+            <hr aria-hidden="true" style="border: 0; height: 1px; background: #eee; margin: 30px 0;">
+
+            <section aria-labelledby="istituto-titolo">
+                <h2 id="istituto-titolo">ITT "Guido Dorso" di Avellino</h2>
+                <p>
+                    <strong>L'Istituto Tecnico Tecnologico (ITT) "Guido Dorso"</strong> rappresenta una delle realtà educative più solide della Campania. 
+                    Situato nel cuore del capoluogo irpino, è un polo tecnologico all'avanguardia che dialoga costantemente con il mondo del lavoro e dell'innovazione.
+                </p>
+
+                <figure class="image-container">
+                    <a href="https://www.itisguidodorso.edu.it" target="_blank" rel="noopener" aria-label="Sito ufficiale ITT Guido Dorso - Apre in una nuova scheda">
+                        <img src="immagini/ITT2.jpg" alt="Vista prospettica dell'ingresso principale della sede ITT Guido Dorso" class="itt-image">
+                    </a>
+                    <figcaption class="sr-only">Sede dell'Istituto Guido Dorso di Avellino</figcaption>
+                </figure>
+            </section>
+        </article>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 - <strong>Classe 3Ci</strong> - ITT Guido Dorso - Avellino</p>
+            <div class="theme-switch">
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle" class="switch">
+            <span class="icon sun">☀️</span>
+            <span class="icon moon">🌙</span>
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+    </footer>
+
+</body>
+</html>
